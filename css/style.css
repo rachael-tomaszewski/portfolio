@@ -107,6 +107,7 @@ img {
   font-size: 6.8em;
   font-family: var(--copy-font);
   position: relative;
+  width: 100%;
 }
 .page-title:before {
   position: absolute;
