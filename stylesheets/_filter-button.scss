@@ -1,0 +1,19 @@
+.filter-button {
+	border: none;
+	font-size: 1.6em;
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+	&.active,
+	&:hover {
+		background-color: var(--tertiary-color);
+		color: var(--secondary-color);
+	}
+
+	&:focus {
+		outline: none;
+	}
+}

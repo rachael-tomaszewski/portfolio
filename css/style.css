@@ -1,0 +1,211 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --primary-color: #FFFFFF;
+  --secondary-color: #000000;
+  --tertiary-color: light-salmon;
+  --transparent-white: rgba(255,255,255,.9);
+  --title-font: "futura", sans-serif;
+  --copy-font: "futura", sans-serif;
+}
+
+body {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  font-size: 10px;
+}
+
+h1 {
+  padding-left: 30px;
+  max-width: 500px;
+}
+
+head {
+  margin-left: 1165px;
+  margin-top: 10px;
+  --title-font: "futura", sans-serif;
+  --copy-font: "futura", sans-serif;
+}
+
+p {
+  font-family: "futura", sans-serif;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-top: 15px;
+  text-align: left;
+  max-width: 500px;
+
+}
+
+img {
+  padding-top: 15px;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+.container--small {
+  max-width: 900px;
+}
+
+.page-title {
+  display: inline-block;
+  font-size: 6.8em;
+  font-family: var(--copy-font);
+  position: relative;
+}
+.page-title:before {
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  height: 18px;
+  width: 100%;
+  content: "";
+  z-index: -1;
+}
+
+.description {
+  font-size: 3.2em;
+  font-family: var(--copy-font);
+}
+
+.gallery__item {
+  display: block;
+  float: left;
+  margin-right: 0;
+  width: calc(25% - 10px);
+  margin-bottom: 10px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+}
+
+.modal {
+  opacity: 0;
+  pointer-events: none;
+  background-color: var(--transparent-white);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.modal--open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal__image {
+  position: absolute;
+  width: calc(100% - 80px);
+  max-width: 600px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-close {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.modal-close:before, .modal-close:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 15px;
+  width: 3px;
+  height: 30px;
+  background-color: var(--secondary-color);
+  transition: background-color 0.2s ease-in-out;
+}
+.modal-close:before {
+  transform: rotate(45deg);
+}
+.modal-close:after {
+  transform: rotate(-45deg);
+}
+.modal-close:hover:before, .modal-close:hover:after {
+  background-color: var(--tertiary-color);
+}
+
+.filter-button {
+  border: none;
+  font-size: 1.6em;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.filter-button.active, .filter-button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+}
+.filter-button:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=style.css.map */

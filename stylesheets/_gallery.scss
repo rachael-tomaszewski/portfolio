@@ -1,0 +1,17 @@
+.gallery {
+
+	&__item {
+		display: block;
+		float: left;
+		margin-right: 0;
+		width: calc(25% - 10px);
+		margin-bottom: 10px;
+		padding: 0 5px;
+		cursor: pointer;
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+}
